@@ -1,5 +1,5 @@
 # DoneWithIt (React-Native)
-Done With It is a full stack iOS/android application for selling things in your home that you are done with. The description of the project can be viewed in the first 5 minutes of this [Youtube video](https://www.youtube.com/watch?v=0-S5a0eXPoc&t=1s).
+Done With It is a **full stack iOS/android application** for selling things in your home that you are done with. The description of the project can be viewed in the first 5 minutes of this [Youtube video](https://www.youtube.com/watch?v=0-S5a0eXPoc&t=1s).
 I am following the full [20 hr+ course](https://codewithmosh.com/p/the-ultimate-react-native-course) that will help me learn all the necessary skills to get this app production ready.
 
 Technology stack i used:
@@ -10,7 +10,7 @@ Technology stack i used:
   5. yup
   6. Visual Studio code 
 
-At the moment you can test rendering all the screens through App.js like shown below.
+At the moment, the UI component development is ongoing and you can test rendering all the screens through App.js like shown below.
 
 ![Welcome Screen](https://github.com/ShivankYadav/DoneWithIt/blob/master/images/HomePage.png)
 
