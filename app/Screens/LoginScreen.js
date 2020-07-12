@@ -1,12 +1,9 @@
 import React from "react";
 import { StyleSheet, Image } from "react-native";
-import { Formik } from "formik";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
-import AppButton from "../components/AppButton";
-import colors from "../config/colors";
-import AppFormField from "../components/AppFormField";
+import { AppForm, AppFormField, SubmitButton } from "../components/forms";
 
 // validation schema
 const vs = Yup.object().shape({
@@ -18,41 +15,33 @@ const LoginScreen = () => {
   return (
     <Screen style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-      <Formik
+      <AppForm
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => console.log(values)}
         validationSchema={vs}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
-          <>
-            <AppFormField
-              autoCapitalize="none"
-              autoCorrect={false}
-              iconName="email"
-              name="email"
-              keyboardType="email-address"
-              placeholder="Email"
-              textContentType="emailAddress"
-            />
+        <AppFormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          iconName="email"
+          name="email"
+          keyboardType="email-address"
+          placeholder="Email"
+          textContentType="emailAddress"
+        />
 
-            <AppFormField
-              autoCapitalize="none"
-              autoCorrect={false}
-              iconName="lock"
-              name="password"
-              placeholder="Password"
-              textContentType="password"
-              secureTextEntry
-            />
+        <AppFormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          iconName="lock"
+          name="password"
+          placeholder="Password"
+          textContentType="password"
+          secureTextEntry
+        />
 
-            <AppButton
-              title="Log In"
-              color={colors.primary}
-              onPress={handleSubmit}
-            />
-          </>
-        )}
-      </Formik>
+        <SubmitButton title="Log In" />
+      </AppForm>
     </Screen>
   );
 };

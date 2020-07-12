@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormikContext } from "formik";
 
-import AppTextInput from "./AppTextInput";
+import AppTextInput from "../AppTextInput";
 import AppErrorMessage from "./AppErrorMessage";
 
 // otherProps include all the other properties of an AppInputText components that user want

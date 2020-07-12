@@ -3,18 +3,16 @@ import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
 import colors from "../config/colors";
 
-function AppButton(props) {
-  // we are going to use custom UI design using containers
-
+const AppButton = ({ title, onPress, color = "primary" }) => {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: props.color }]}
-      onPress={props.onPress}
+      style={[styles.button, { backgroundColor: colors[color] }]}
+      onPress={onPress}
     >
-      <Text style={styles.text}>{props.title}</Text>
+      <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
-}
+};
 
 const styles = StyleSheet.create({
   button: {
