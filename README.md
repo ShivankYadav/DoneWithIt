@@ -9,6 +9,7 @@ Technology stack i used:
   4. formik
   5. yup
   6. Visual Studio code 
+  7. Android Studio Emulator
 
 At the moment, the UI component development is ongoing and you can test rendering all the screens through App.js like shown below.
 
