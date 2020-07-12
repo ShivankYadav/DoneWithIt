@@ -10,29 +10,26 @@ import ListingsScreen from "./app/Screens/ListingsScreen";
 import Screen from "./app/components/Screen";
 import { TextInput, Text } from "react-native";
 import AppTextInput from "./app/components/AppTextInput";
+import AppPicker from "./app/components/AppPicker";
 
+const categories = [
+  { label: "Furniture", value: 1 },
+  { label: "Clothing", value: 2 },
+  { label: "Camera", value: 3 },
+];
 export default function App() {
   console.log("App Executed");
-  const [firstName, setFirstName] = useState("");
+  const [category, setCategory] = useState(); // initialized state of picker.
   return (
     <Screen>
+      <AppPicker
+        selectedItem={category}
+        onSelectItem={(item) => setCategory(item)}
+        iconName="apps"
+        items={categories}
+        placeholder="Categories"
+      />
       <AppTextInput placeholder="UserName" iconName="email" />
-      <Text>{firstName}</Text>
     </Screen>
   );
-}
-
-{
-  /*
-<TextInput
-        placeholder="Email"
-        style={{
-          borderColor: "#ccc",
-          borderBottomWidth: 1,
-        }}
-        onChangeText={(text) => setFirstName(text)}
-        maxLength={20}
-        clearButtonMode="always"
-      />
-*/
 }
