@@ -29,7 +29,7 @@ const ListingsScreen = () => {
         renderItem={({ item }) => (
           <AppCard
             title={item.title}
-            subTitle={item.price}
+            subTitle={"$" + item.price}
             image={item.image}
           />
         )}

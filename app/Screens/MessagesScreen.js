@@ -10,8 +10,10 @@ import ListItemDelete from "../components/ListItemDelete";
 var initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title:
+      "With an Android phone, you can scan this QR code with your Expo mobile app to load this project immediately.",
+    description:
+      "Enter your e-mail or phone number below and you will get a link to open the project for your mobile device.",
     image: require("../assets/mosh.jpg"),
   },
 
