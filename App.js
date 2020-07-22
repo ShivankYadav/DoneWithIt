@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import * as ImagePicker from "expo-image-picker";
 
-import LoginScreen from "./app/Screens/LoginScreen";
-import MessagesScreen from "./app/Screens/MessagesScreen";
-import ListingsScreen from "./app/Screens/ListingsScreen";
-import AppPicker from "./app/components/AppPicker";
 import Screen from "./app/components/Screen";
 import ListingsEditScreen from "./app/Screens/ListingsEditScreen";
+import { Button, Image } from "react-native";
+import ImageInputList from "./app/components/imageImport/ImageInputList";
 
 export default function App() {
   console.log("App Executed");
-  return <ListingsEditScreen />;
+
+  const [imageUris, setImageUris] = useState([]); // list of uris
+
+  const handleAdd = (uri) => {
+    setImageUris([...imageUris, uri]);
+  };
+
+  const handleRemove = (uri) => {
+    setImageUris(imageUris.filter((imageUri) => imageUri !== uri));
+  };
+
+  return (
+    <Screen>
+      <ImageInputList
+        imgUris={imageUris}
+        onAddImage={handleAdd}
+        onRemoveImage={handleRemove}
+      />
+    </Screen>
+  );
 }
 
 // define labels for app picker testing
