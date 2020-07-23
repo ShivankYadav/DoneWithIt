@@ -10,6 +10,10 @@ Technology stack i used:
   5. yup
   6. Visual Studio code 
   7. Android Studio Emulator
+  8. React Navigation API
+  9. Expo Vector Icons API
+  10. Expo Image Picker API
+  11. Expo Location API
 
 At the moment, the UI component development is ongoing and you can test rendering all the screens through App.js like shown below.
 
