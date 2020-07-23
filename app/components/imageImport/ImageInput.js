@@ -10,7 +10,7 @@ import colors from "../../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 
-function ImageInput({ imgUri, onImageChange }) {
+function ImageInput({ imageUri, onImageChange }) {
   const requestPermission = async () => {
     const result = await ImagePicker.requestCameraRollPermissionsAsync();
     if (!result.granted) alert("Give permission to access the Gallery");
@@ -22,7 +22,7 @@ function ImageInput({ imgUri, onImageChange }) {
 
   const handlePress = () => {
     // if we don't have an image at the moment of touching this view, we are going to show the image library
-    if (!imgUri) selectImage();
+    if (!imageUri) selectImage();
     else
       Alert.alert("Delete Image", "Are You sure?", [
         { text: "Yes", onPress: () => onImageChange(null) },
@@ -46,14 +46,14 @@ function ImageInput({ imgUri, onImageChange }) {
   return (
     <TouchableWithoutFeedback onPress={handlePress}>
       <View style={styles.container}>
-        {!imgUri && (
+        {!imageUri && (
           <MaterialCommunityIcons
             color={colors.mediumGray}
             name="camera"
             size={40}
           />
         )}
-        {imgUri && <Image source={{ uri: imgUri }} style={styles.image} />}
+        {imageUri && <Image source={{ uri: imageUri }} style={styles.image} />}
       </View>
     </TouchableWithoutFeedback>
   );
