@@ -13,6 +13,11 @@ Technology stack i used:
 
 At the moment, the UI component development is ongoing and you can test rendering all the screens through App.js like shown below.
 
+Completed UI development.
+
+Implemented Navigation between Screens using React Navigation APIs
+
+
 ![Welcome Screen](https://github.com/ShivankYadav/DoneWithIt/blob/master/images/HomePage.png)
 
 ![Login Screen](https://github.com/ShivankYadav/DoneWithIt/blob/master/images/LoginScreen.png)
